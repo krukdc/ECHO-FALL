@@ -17,19 +17,20 @@
 - **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
 - **Status:** nadal występuje. Zrzut 9518.jpg pokazuje, że polska etykieta w pauzie zawija się do bardzo wąskiej kolumny; poprawka z poprzedniego buildu nie rozwiązała problemu na telefonie.
 
-### [ ] Obiekt w pokoju obrony przekaźnika ginie po jednym pozornym trafieniu
+### [ ] Przekaźnik otrzymuje kilka obrażeń z jednego wachlarza pocisków
 
-- **Odtworzenie zgłoszone przez użytkownika:** piętro 2, pokój 2, trudność Standard; pojedynczy pocisk podstawowej jednostki strzelającej niszczy obiekt.
+- **Odtworzenie potwierdzone:** piętro 2, pokój 2, trudność Standard; teleportujący przeciwnik (Beam Wraith) trafia przekaźnik trzema pociskami jednocześnie po teleportacji.
 - **Oczekiwane:** przekaźnik powinien przyjmować wiele trafień zgodnie z paskiem integralności i pozwolić na obronę przez obie fale.
-- **Wstępny trop:** w kodzie przekaźnik startuje z 100 HP, a pocisk strzelca na piętrze 2 powinien zadać 16 obrażeń (bazowe 8 × mnożnik piętra 2). Zgłoszony wynik nie zgadza się z tym wyliczeniem; trzeba prześledzić, co kończy run.
-- **Potwierdzone:** po jednym trafieniu pojawia się „Przekaźnik zniszczony”. Przypadek: piętro 2, pokój 2, Standard, pojedynczy pocisk podstawowego strzelca.
-- **Do ustalenia:** dlaczego w rzeczywistym przebiegu obiekt traci całe HP, skoro statyczne obliczenie pocisku daje 16/100. Nie uznajemy tego błędu za naprawiony.
+- **Wstępny trop:** Beam Wraith wystrzeliwuje po teleportacji wachlarz trzech pocisków; na piętrze 2 każdy zadaje 28 obrażeń.
+- **Potwierdzone na zrzucie 9520.jpg:** pojawia się komunikat „Przekaźnik zniszczony” i ekran końca runu po wachlarzu trzech pocisków Beam Wraith.
+- **Przyczyna:** pociski nie przekazywały właściciela do obsługi trafienia. Ograniczenie 720 ms działało przy kontakcie z wrogiem, ale wachlarz trzech pocisków (po 28 obrażeń na piętrze 2) omijał limit i sumował obrażenia.
+- **Poprawka w buildu 0.9.7:** każdy pocisk przeciwnika zachowuje referencję do strzelca; limit obrażeń 720 ms jest wspólny dla jego pocisków i kontaktu. Potwierdzić na telefonie, że jeden wachlarz nie niszczy od razu przekaźnika.
 
-### [x] Powiadomienia rozwoju zasłaniają arenę
+### [ ] Powiadomienia rozwoju zasłaniają arenę
 
 - **Objaw:** komunikaty, np. „LEVEL UP”, pojawiają się na środku areny i zasłaniają widok walki.
 - **Oczekiwane:** powiadomienia są czytelne, ale wyświetlane poza obszarem gry.
-- **Poprawka w buildu 0.9.6:** pasek komunikatów przeniesiony pod arenę, z zachowaniem tłumaczeń i czasu wyświetlania.
+- **Poprawka w buildu 0.9.7:** pasek komunikatów przeniesiony pod arenę, z zachowaniem tłumaczeń i czasu wyświetlania.
 - **Status:** zmiana czeka na test użytkownika.
 
 ### Weryfikacja po poprawkach
@@ -42,7 +43,7 @@
 
 ### Priorytet 1 — kontrola wydania
 
-- [ ] Po testach buildu 0.9.6 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
+- [ ] Po testach buildu 0.9.7 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
 - [ ] Przejść całą kampanię od menu do zwycięstwa i osobno sprawdzić ekran śmierci oraz restart.
 - [ ] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
 - [ ] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
