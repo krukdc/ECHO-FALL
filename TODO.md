@@ -7,15 +7,22 @@
 - **Objaw:** na załączonym zrzucie z telefonu jasne ślady pocisków lub efektów przecinają górną krawędź pola gry i są widoczne przy jego brzegu. Zgłoszenie pochodzi z mobilnego widoku pliku HTML.
 - **Oczekiwane:** pociski znikają po opuszczeniu areny, a wszystkie cząsteczki i smugi są przycinane do obszaru planszy.
 - **Poprawka:** renderowanie areny jest przycinane do logicznego obszaru planszy; pociski i cząsteczki są usuwane po opuszczeniu jego granic.
-- **Status:** poprawione w kodzie; sprawdzenie na telefonie i w przeglądarce pozostaje do wykonania.
+- **Status:** poprawione i potwierdzone przez użytkownika w teście na telefonie.
 
-### [x] Przycisk pełnego ekranu zmienia wygląd zależnie od języka
+### [ ] Przycisk pełnego ekranu nadal łamie układ zależnie od języka
 
 - **Objaw:** na zrzutach porównawczych przycisk „EXIT FULL SCREEN” ma ciemne tło i cienką ramkę, a „WYJDŹ Z PEŁNEGO EKRANU” jest jasnoszary, większy i inaczej sformatowany.
 - **Oczekiwane:** przełączenie polskiego i angielskiego zmienia wyłącznie etykietę. Tło, obramowanie, krój pisma, rozmiar i odstępy przycisku pozostają takie same.
 - **Poprawka:** przycisk pauzy ma własną, stałą klasę i układ; zmiana języka aktualizuje tylko tekst etykiety. Układ akcji dopasowuje się do małych ekranów.
 - **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
-- **Status:** poprawione w kodzie; porównanie wizualne obu języków pozostaje do wykonania.
+- **Status:** nadal występuje. Zrzut 9518.jpg pokazuje, że polska etykieta w pauzie zawija się do bardzo wąskiej kolumny; poprawka z poprzedniego buildu nie rozwiązała problemu na telefonie.
+
+### [ ] Obiekt w pokoju obrony przekaźnika ginie po jednym pozornym trafieniu
+
+- **Objaw:** według testu użytkownika wystarczy jedno trafienie, aby zniszczyć obiekt, który trzeba chronić.
+- **Oczekiwane:** przekaźnik powinien przyjmować wiele trafień zgodnie z paskiem integralności i pozwolić na obronę przez obie fale.
+- **Wstępny trop:** kod ma 100 HP i ogranicza ponowne trafienia osobno dla każdego wroga; pociski nie mają wspólnego czasu ochronnego, więc kilka źródeł obrażeń może zsumować się w jednej chwili. Trzeba potwierdzić, czy problem wywołuje pojedynczy pocisk/kontakt, czy nakładające się trafienia.
+- **Do zebrania przy odtworzeniu:** piętro i pokój, poziom trudności oraz rodzaj ataku, który trafił przekaźnik.
 
 ### Weryfikacja po poprawkach
 
@@ -39,7 +46,7 @@
 
 - [ ] Zebrać krótkie notatki z kilku runów na Normal i Hard: czas kampanii, zgony, nadmiar lub brak złomu, skuteczność broni i synergie.
 - [ ] Po zebraniu obserwacji poprawiać balans małymi zmianami i zapisywać każdą zmianę w osobnym commicie.
-- [ ] Sprawdzić czytelność HUD-u i przycisków na małych ekranach, także w orientacji poziomej. (Układ poziomy dodany; kontrola na prawdziwym telefonie nadal potrzebna.)
+- [x] Sprawdzić skalowanie gry na telefonie. Użytkownik potwierdził, że działa dobrze; układ przycisku pełnego ekranu pozostaje osobnym błędem.
 - [ ] Po testach użytkownika dopracować układ poziomy: zebrać konkretne uwagi i poprawić rozmiar areny, rozmieszczenie HUD-u oraz wygodę sterowania dotykowego.
 
 ### Pomysły na później
