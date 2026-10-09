@@ -17,6 +17,14 @@
 - **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
 - **Status:** nadal występuje. Zrzut 9518.jpg pokazuje, że polska etykieta w pauzie zawija się do bardzo wąskiej kolumny; poprawka z poprzedniego buildu nie rozwiązała problemu na telefonie.
 
+### [x] Flagi języków wyświetlają się jako kody na komputerze
+
+- **Objaw:** na zrzutach z komputera flagi przy językach Polski i Angielski wyświetlają się jako litery „PL” i „GB”.
+- **Przyczyna:** selektor używał emoji flag, których wygląd zależy od fontów i obsługi emoji w systemie.
+- **Poprawka w buildu 0.10.1:** emoji zastąpione osadzonymi flagami SVG; ich wygląd nie zależy od fontu emoji systemu.
+- **Dowód:** zrzuty image-1791556959059.jpg i image-1791556969153.jpg.
+- **Status:** poprawka gotowa; sprawdzić w Windows po przełączeniu PL/EN.
+
 ### [x] Przekaźnik otrzymuje kilka obrażeń z jednego wachlarza pocisków
 
 - **Odtworzenie potwierdzone:** piętro 2, pokój 2, trudność Standard; teleportujący przeciwnik (Beam Wraith) trafia przekaźnik trzema pociskami jednocześnie po teleportacji.
@@ -40,6 +48,7 @@
 - [ ] Sprawdzić na telefonie, czy pociski, smugi, cząsteczki i rozbłyski nie wychodzą poza arenę.
 - [ ] Porównać przycisk pełnego ekranu w pauzie po przełączeniu języka PL/EN, także w orientacji poziomej.
 - [ ] Przejść menu, HUD, sklep, nagrody, walki z bossami i ekrany końcowe w Traditional Chinese; sprawdzić fonty, zawijanie tekstu i zapamiętanie języka po ponownym otwarciu.
+- [ ] Na komputerze sprawdzić flagi SVG w ustawieniach po przełączeniu PL/EN oraz wygląd przycisków klawiszy.
 
 ## Kolejne prace
 
