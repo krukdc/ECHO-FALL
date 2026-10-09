@@ -8,6 +8,13 @@
 - **Oczekiwane:** pociski znikają po opuszczeniu areny, a wszystkie cząsteczki i smugi są przycinane do obszaru planszy.
 - **Do sprawdzenia:** odtworzyć problem na telefonie i w zwykłej karcie przeglądarki; sprawdzić granice canvasu i skalowanie widoku; przejrzeć rysowanie pocisków/cząsteczek pod kątem clippingu (`save`/`restore`) oraz usuwania obiektów poza planszą.
 - **Status:** przyczyna niepotwierdzona; do diagnozy i naprawy.
+### [ ] Przycisk pełnego ekranu zmienia wygląd zależnie od języka
+
+- **Objaw:** na zrzutach porównawczych przycisk „EXIT FULL SCREEN” ma ciemne tło i cienką ramkę, a „WYJDŹ Z PEŁNEGO EKRANU” jest jasnoszary, większy i inaczej sformatowany.
+- **Oczekiwane:** przełączenie polskiego i angielskiego zmienia wyłącznie etykietę. Tło, obramowanie, krój pisma, rozmiar i odstępy przycisku pozostają takie same.
+- **Do sprawdzenia:** porównać klasy CSS oraz szerokość i zawijanie tekstu przycisku w obu językach; sprawdzić, czy lokalizacja lub aktualizacja etykiety po wejściu w pełny ekran nie zastępuje stylowanego elementu albo nie uruchamia domyślnego stylu przeglądarki.
+- **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
+- **Status:** przyczyna niepotwierdzona; do diagnozy i naprawy.
 
 ## Kolejne prace
 
