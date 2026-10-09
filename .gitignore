@@ -1,0 +1,3 @@
+# Dane lokalne, których nie dołączamy do repozytorium
+.codex-remote-attachments/
+.superpowers/
