@@ -1,10 +1,10 @@
 # ECHO-FALL
 
-ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Aktualna wersja gry: `ECHO-FALL.build.0.9.4.html`.
+ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Aktualna wersja gry: `ECHO-FALL.build.0.9.5.html`.
 
 ## Jak uruchomić grę
 
-1. Otwórz plik `ECHO-FALL.build.0.9.4.html` w aktualnej przeglądarce, np. Chrome, Edge lub Firefox.
+1. Otwórz plik `ECHO-FALL.build.0.9.5.html` w aktualnej przeglądarce, np. Chrome, Edge lub Firefox.
 2. Rozpocznij run z ekranu startowego. Instalacja, serwer i internet nie są potrzebne.
 3. Na telefonie otwórz plik w przeglądarce. Gra wykrywa ekran dotykowy i pokazuje sterowanie na ekranie. Możesz obrócić telefon do poziomu; układ gry dopasuje się do orientacji.
 
@@ -26,7 +26,7 @@ Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądar
 Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze sterowania na komputerze można zmienić w ustawieniach na ekranie startowym lub w pauzie. Przypisania i wybór języka zapisują się lokalnie w przeglądarce. Strzałki nadal działają jako alternatywne sterowanie ruchem. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
 ## Pliki projektu
 
-- `ECHO-FALL.build.0.9.4.html` — gra wraz z HTML, CSS i JavaScriptem.
+- `ECHO-FALL.build.0.9.5.html` — gra wraz z HTML, CSS i JavaScriptem.
 - `docs/superpowers/specs/` — zatwierdzone opisy projektu.
 - `docs/superpowers/plans/` — plany implementacji i kampanii.
 - `TODO.md` — znane błędy i lista pomysłów na rozwój.
@@ -38,7 +38,7 @@ Uruchom te polecenia w folderze projektu:
 ```powershell
 git status
 git log --oneline
-git add ECHO-FALL.build.0.9.4.html TODO.md README.md
+git add ECHO-FALL.build.0.9.5.html TODO.md README.md
 git commit -m "Krótki opis zmiany"
 ```
 
