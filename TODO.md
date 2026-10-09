@@ -2,19 +2,25 @@
 
 ## Błędy
 
-### [ ] Pociski i efekty wizualne pozostają poza ekranem areny
+### [x] Pociski i efekty wizualne pozostają poza ekranem areny
 
 - **Objaw:** na załączonym zrzucie z telefonu jasne ślady pocisków lub efektów przecinają górną krawędź pola gry i są widoczne przy jego brzegu. Zgłoszenie pochodzi z mobilnego widoku pliku HTML.
 - **Oczekiwane:** pociski znikają po opuszczeniu areny, a wszystkie cząsteczki i smugi są przycinane do obszaru planszy.
-- **Do sprawdzenia:** odtworzyć problem na telefonie i w zwykłej karcie przeglądarki; sprawdzić granice canvasu i skalowanie widoku; przejrzeć rysowanie pocisków/cząsteczek pod kątem clippingu (`save`/`restore`) oraz usuwania obiektów poza planszą.
-- **Status:** przyczyna niepotwierdzona; do diagnozy i naprawy.
-### [ ] Przycisk pełnego ekranu zmienia wygląd zależnie od języka
+- **Poprawka:** renderowanie areny jest przycinane do logicznego obszaru planszy; pociski i cząsteczki są usuwane po opuszczeniu jego granic.
+- **Status:** poprawione w kodzie; sprawdzenie na telefonie i w przeglądarce pozostaje do wykonania.
+
+### [x] Przycisk pełnego ekranu zmienia wygląd zależnie od języka
 
 - **Objaw:** na zrzutach porównawczych przycisk „EXIT FULL SCREEN” ma ciemne tło i cienką ramkę, a „WYJDŹ Z PEŁNEGO EKRANU” jest jasnoszary, większy i inaczej sformatowany.
 - **Oczekiwane:** przełączenie polskiego i angielskiego zmienia wyłącznie etykietę. Tło, obramowanie, krój pisma, rozmiar i odstępy przycisku pozostają takie same.
-- **Do sprawdzenia:** porównać klasy CSS oraz szerokość i zawijanie tekstu przycisku w obu językach; sprawdzić, czy lokalizacja lub aktualizacja etykiety po wejściu w pełny ekran nie zastępuje stylowanego elementu albo nie uruchamia domyślnego stylu przeglądarki.
+- **Poprawka:** przycisk pauzy ma własną, stałą klasę i układ; zmiana języka aktualizuje tylko tekst etykiety. Układ akcji dopasowuje się do małych ekranów.
 - **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
-- **Status:** przyczyna niepotwierdzona; do diagnozy i naprawy.
+- **Status:** poprawione w kodzie; porównanie wizualne obu języków pozostaje do wykonania.
+
+### Weryfikacja po poprawkach
+
+- [ ] Sprawdzić na telefonie, czy pociski, smugi, cząsteczki i rozbłyski nie wychodzą poza arenę.
+- [ ] Porównać przycisk pełnego ekranu w pauzie po przełączeniu języka PL/EN, także w orientacji poziomej.
 
 ## Kolejne prace
 
