@@ -22,7 +22,7 @@ Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądar
 | Statystyki postaci | C | SELECT |
 | Pauza | Escape | START |
 
-Język polski lub angielski można zmienić w ustawieniach na ekranie startowym.
+Język polski lub angielski można zmienić w ustawieniach na ekranie startowym. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
 
 ## Pliki projektu
 
