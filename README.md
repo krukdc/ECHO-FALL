@@ -14,15 +14,15 @@ Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądar
 
 | Czynność | Klawiatura | Ekran dotykowy |
 | --- | --- | --- |
-| Ruch | WASD lub strzałki | Drążek ekranowy |
-| Celowanie | IJKL | Automatyczne podczas ataku |
-| Zwykły atak | Z | A / FIRE |
-| Nova | X | B / NOVA |
-| Blink | Spacja | L / BLINK |
+| Ruch | WASD lub strzałki (konfigurowalne) | Drążek ekranowy |
+| Celowanie | IJKL (konfigurowalne) | Automatyczne podczas ataku |
+| Zwykły atak | Z (konfigurowalne) | A / FIRE |
+| Nova | X (konfigurowalne) | B / NOVA |
+| Blink | Spacja (konfigurowalne) | L / BLINK |
 | Statystyki postaci | C | SELECT |
 | Pauza | Escape | START |
 
-Język polski lub angielski można zmienić w ustawieniach na ekranie startowym. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
+Język polski lub angielski oraz klawisze sterowania na komputerze można zmienić w ustawieniach na ekranie startowym lub w pauzie. Przypisania zapisują się lokalnie w przeglądarce. Strzałki nadal działają jako alternatywne sterowanie ruchem. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
 
 ## Pliki projektu
 
