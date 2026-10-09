@@ -22,7 +22,7 @@
 
 - [ ] Zebrać krótkie notatki z kilku runów na Normal i Hard: czas kampanii, zgony, nadmiar lub brak złomu, skuteczność broni i synergie.
 - [ ] Po zebraniu obserwacji poprawiać balans małymi zmianami i zapisywać każdą zmianę w osobnym commicie.
-- [ ] Sprawdzić czytelność HUD-u i przycisków na małych ekranach, także w orientacji poziomej.
+- [ ] Sprawdzić czytelność HUD-u i przycisków na małych ekranach, także w orientacji poziomej. (Układ poziomy dodany; kontrola na prawdziwym telefonie nadal potrzebna.)
 
 ### Pomysły na później
 

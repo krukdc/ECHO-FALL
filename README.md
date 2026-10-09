@@ -6,7 +6,7 @@ ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Ak
 
 1. Otwórz plik `ECHO-FALL.build.0.9.4.html` w aktualnej przeglądarce, np. Chrome, Edge lub Firefox.
 2. Rozpocznij run z ekranu startowego. Instalacja, serwer i internet nie są potrzebne.
-3. Na telefonie otwórz plik w przeglądarce. Gra wykrywa ekran dotykowy i pokazuje sterowanie na ekranie.
+3. Na telefonie otwórz plik w przeglądarce. Gra wykrywa ekran dotykowy i pokazuje sterowanie na ekranie. Możesz obrócić telefon do poziomu; układ gry dopasuje się do orientacji.
 
 Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądarce (`localStorage`). Wyczyszczenie danych przeglądarki może usunąć ten zapis.
 
