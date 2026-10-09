@@ -22,8 +22,8 @@ Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądar
 | Statystyki postaci | C | SELECT |
 | Pauza | Escape | START |
 
-Język polski lub angielski oraz klawisze sterowania na komputerze można zmienić w ustawieniach na ekranie startowym lub w pauzie. Przypisania zapisują się lokalnie w przeglądarce. Strzałki nadal działają jako alternatywne sterowanie ruchem. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
 
+Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze sterowania na komputerze można zmienić w ustawieniach na ekranie startowym lub w pauzie. Przypisania i wybór języka zapisują się lokalnie w przeglądarce. Strzałki nadal działają jako alternatywne sterowanie ruchem. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
 ## Pliki projektu
 
 - `ECHO-FALL.build.0.9.4.html` — gra wraz z HTML, CSS i JavaScriptem.
