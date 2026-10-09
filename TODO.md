@@ -27,6 +27,7 @@
 
 ### Priorytet 1 — kontrola wydania
 
+- [ ] Po testach buildu 0.9.5 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
 - [ ] Przejść całą kampanię od menu do zwycięstwa i osobno sprawdzić ekran śmierci oraz restart.
 - [ ] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
 - [ ] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.

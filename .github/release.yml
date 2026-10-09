@@ -1,0 +1,16 @@
+changelog:
+  exclude:
+    labels:
+      - pominięte-w-notatkach
+  categories:
+    - title: Nowości
+      labels:
+        - nowa-funkcja
+        - enhancement
+    - title: Poprawki i balans
+      labels:
+        - bug
+        - poprawka-balansu
+    - title: Pozostałe zmiany
+      labels:
+        - "*"

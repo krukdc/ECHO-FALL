@@ -31,6 +31,10 @@ Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze st
 - `docs/superpowers/plans/` — plany implementacji i kampanii.
 - `TODO.md` — znane błędy i lista pomysłów na rozwój.
 
+## Zgłaszanie błędów
+
+W zakładce **Issues** wybierz formularz **Zgłoś błąd**. Podaj wersję gry, urządzenie, przeglądarkę, orientację ekranu i kroki prowadzące do problemu. Repozytorium jest prywatne, więc zgłoszenia zobaczą tylko osoby z dostępem do projektu.
+
 ## Podstawy Git
 
 Uruchom te polecenia w folderze projektu:

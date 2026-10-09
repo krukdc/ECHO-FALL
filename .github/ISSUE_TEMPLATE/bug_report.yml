@@ -1,0 +1,92 @@
+name: Zgłoś błąd
+description: Opisz problem z grą, urządzeniem i krokami do jego odtworzenia.
+title: "[BŁĄD] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zgłoszenia w tym prywatnym repozytorium widzą tylko osoby z dostępem do projektu.
+
+  - type: input
+    id: build
+    attributes:
+      label: Wersja gry
+      description: Numer widoczny w stopce gry lub nazwa pliku buildu.
+      placeholder: ECHO-FALL.build.0.9.5.html
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Urządzenie
+      options:
+        - Telefon
+        - Tablet
+        - Komputer
+        - Inne
+    validations:
+      required: true
+
+  - type: input
+    id: device_model
+    attributes:
+      label: Model urządzenia i system
+      placeholder: np. Pixel 8, Android 16 albo Windows 11
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Przeglądarka i wersja
+      placeholder: np. Chrome 140
+    validations:
+      required: true
+
+  - type: dropdown
+    id: orientation
+    attributes:
+      label: Orientacja ekranu
+      options:
+        - Pozioma
+        - Pionowa
+        - Nie dotyczy
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki do odtworzenia
+      description: Wypisz po kolei, co zrobić, aby zobaczyć problem.
+      placeholder: |
+        1. Otwórz grę...
+        2. Wybierz...
+        3. Problem pojawia się, gdy...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Oczekiwane działanie
+      description: Co powinno się wydarzyć?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Rzeczywiste działanie
+      description: Co wydarzyło się zamiast tego?
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Zrzut ekranu lub dodatkowe informacje
+      description: Możesz dołączyć zrzut ekranu po utworzeniu zgłoszenia. Nie umieszczaj danych osobowych.
+    validations:
+      required: false
