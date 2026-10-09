@@ -45,7 +45,7 @@
 
 ### Priorytet 1 — kontrola wydania
 
-- [ ] Po testach buildu 0.10.0 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
+- [x] Utworzyć prywatny GitHub Release v0.10.0 z listą zmian i linkiem do pliku HTML w repozytorium.
 - [ ] Przejść całą kampanię od menu do zwycięstwa i osobno sprawdzić ekran śmierci oraz restart.
 - [ ] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
 - [ ] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
