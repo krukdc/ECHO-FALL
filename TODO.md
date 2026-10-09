@@ -19,10 +19,18 @@
 
 ### [ ] Obiekt w pokoju obrony przekaźnika ginie po jednym pozornym trafieniu
 
-- **Objaw:** według testu użytkownika wystarczy jedno trafienie, aby zniszczyć obiekt, który trzeba chronić.
+- **Odtworzenie zgłoszone przez użytkownika:** piętro 2, pokój 2, trudność Standard; pojedynczy pocisk podstawowej jednostki strzelającej niszczy obiekt.
 - **Oczekiwane:** przekaźnik powinien przyjmować wiele trafień zgodnie z paskiem integralności i pozwolić na obronę przez obie fale.
-- **Wstępny trop:** kod ma 100 HP i ogranicza ponowne trafienia osobno dla każdego wroga; pociski nie mają wspólnego czasu ochronnego, więc kilka źródeł obrażeń może zsumować się w jednej chwili. Trzeba potwierdzić, czy problem wywołuje pojedynczy pocisk/kontakt, czy nakładające się trafienia.
-- **Do zebrania przy odtworzeniu:** piętro i pokój, poziom trudności oraz rodzaj ataku, który trafił przekaźnik.
+- **Wstępny trop:** w kodzie przekaźnik startuje z 100 HP, a pocisk strzelca na piętrze 2 powinien zadać 16 obrażeń (bazowe 8 × mnożnik piętra 2). Zgłoszony wynik nie zgadza się z tym wyliczeniem; trzeba prześledzić, co kończy run.
+- **Potwierdzone:** po jednym trafieniu pojawia się „Przekaźnik zniszczony”. Przypadek: piętro 2, pokój 2, Standard, pojedynczy pocisk podstawowego strzelca.
+- **Do ustalenia:** dlaczego w rzeczywistym przebiegu obiekt traci całe HP, skoro statyczne obliczenie pocisku daje 16/100. Nie uznajemy tego błędu za naprawiony.
+
+### [x] Powiadomienia rozwoju zasłaniają arenę
+
+- **Objaw:** komunikaty, np. „LEVEL UP”, pojawiają się na środku areny i zasłaniają widok walki.
+- **Oczekiwane:** powiadomienia są czytelne, ale wyświetlane poza obszarem gry.
+- **Poprawka w buildu 0.9.6:** pasek komunikatów przeniesiony pod arenę, z zachowaniem tłumaczeń i czasu wyświetlania.
+- **Status:** zmiana czeka na test użytkownika.
 
 ### Weryfikacja po poprawkach
 
@@ -34,7 +42,7 @@
 
 ### Priorytet 1 — kontrola wydania
 
-- [ ] Po testach buildu 0.9.5 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
+- [ ] Po testach buildu 0.9.6 utworzyć prywatny GitHub Release z plikiem HTML i krótką listą zmian.
 - [ ] Przejść całą kampanię od menu do zwycięstwa i osobno sprawdzić ekran śmierci oraz restart.
 - [ ] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
 - [ ] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
