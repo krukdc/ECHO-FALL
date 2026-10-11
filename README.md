@@ -4,7 +4,7 @@ ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Ak
 
 ## Jak uruchomić grę
 
-1. Otwórz plik `ECHO-FALL.build.0.10.3.html` w aktualnej przeglądarce, np. Chrome, Edge lub Firefox.
+1. Pobierz aktualny plik HTML ze strony [najnowszego wydania](https://github.com/krukdc/ECHO-FALL/releases/latest) i otwórz go w aktualnej przeglądarce, np. Chrome, Edge lub Firefox.
 2. Rozpocznij run z ekranu startowego. Instalacja, serwer i internet nie są potrzebne.
 3. Na telefonie otwórz plik w przeglądarce. Gra wykrywa ekran dotykowy i pokazuje sterowanie na ekranie. Możesz obrócić telefon do poziomu; układ gry dopasuje się do orientacji.
 
@@ -33,7 +33,7 @@ Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze st
 
 ## Zgłaszanie błędów
 
-W zakładce **Issues** wybierz formularz **Zgłoś błąd**. Podaj wersję gry, urządzenie, przeglądarkę, orientację ekranu i kroki prowadzące do problemu. Repozytorium jest prywatne, więc zgłoszenia zobaczą tylko osoby z dostępem do projektu.
+W zakładce **Issues** wybierz formularz **Zgłoś błąd**. Podaj wersję gry, urządzenie, przeglądarkę, orientację ekranu i kroki prowadzące do problemu. Repozytorium jest publiczne, więc zgłoszenia i komentarze są widoczne dla wszystkich.
 
 ## Podstawy Git
 
