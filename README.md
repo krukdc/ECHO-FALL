@@ -27,6 +27,7 @@ Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze st
 ## Pliki projektu
 
 - `ECHO-FALL.build.0.11.0.html` — gra wraz z HTML, CSS i JavaScriptem.
+- `Older Versions/` — archiwum wcześniejszych wydań gry.
 - `docs/superpowers/specs/` — zatwierdzone opisy projektu.
 - `docs/superpowers/plans/` — plany implementacji i kampanii.
 - `TODO.md` — znane błędy i lista pomysłów na rozwój.
