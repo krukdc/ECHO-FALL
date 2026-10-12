@@ -1,5 +1,7 @@
 # ECHO-FALL — backlog
 
+> **Statusy:** `[x]` oznacza zadanie wykonane i sprawdzone; `[ ]` oznacza zadanie otwarte lub oczekujące na test.
+
 ## Błędy
 
 ### [x] Pociski i efekty wizualne pozostają poza ekranem areny
@@ -9,13 +11,13 @@
 - **Poprawka:** renderowanie areny jest przycinane do logicznego obszaru planszy; pociski i cząsteczki są usuwane po opuszczeniu jego granic.
 - **Status:** poprawione i potwierdzone przez użytkownika w teście na telefonie.
 
-### [ ] Przycisk pełnego ekranu nadal łamie układ zależnie od języka
+### [x] Przycisk pełnego ekranu zachowuje spójny wygląd w języku polskim i angielskim
 
 - **Objaw:** na zrzutach porównawczych przycisk „EXIT FULL SCREEN” ma ciemne tło i cienką ramkę, a „WYJDŹ Z PEŁNEGO EKRANU” jest jasnoszary, większy i inaczej sformatowany.
 - **Oczekiwane:** przełączenie polskiego i angielskiego zmienia wyłącznie etykietę. Tło, obramowanie, krój pisma, rozmiar i odstępy przycisku pozostają takie same.
 - **Poprawka:** przycisk pauzy ma własną, stałą klasę i układ; zmiana języka aktualizuje tylko tekst etykiety. Układ akcji dopasowuje się do małych ekranów.
 - **Dowód:** załączone zrzuty 9481.jpg (angielski) i 9482.jpg (polski).
-- **Status:** nadal występuje. Zrzut 9518.jpg pokazuje, że polska etykieta w pauzie zawija się do bardzo wąskiej kolumny; poprawka z poprzedniego buildu nie rozwiązała problemu na telefonie.
+- **Status:** naprawione i sprawdzone przez użytkownika; polska etykieta zachowuje układ i styl przycisku.
 
 ### [x] Flagi języków wyświetlają się jako kody na komputerze
 
@@ -23,7 +25,7 @@
 - **Przyczyna:** selektor używał emoji flag, których wygląd zależy od fontów i obsługi emoji w systemie.
 - **Poprawka w buildu 0.10.1:** emoji zastąpione osadzonymi flagami SVG; ich wygląd nie zależy od fontu emoji systemu.
 - **Dowód:** zrzuty image-1791556959059.jpg i image-1791556969153.jpg.
-- **Status:** poprawka gotowa; sprawdzić w Windows po przełączeniu PL/EN.
+- **Status:** poprawka gotowa i sprawdzona na komputerze.
 
 ### [x] Przekaźnik otrzymuje kilka obrażeń z jednego wachlarza pocisków
 
@@ -34,43 +36,51 @@
 - **Przyczyna:** pociski nie przekazywały właściciela do obsługi trafienia. Ograniczenie 720 ms działało przy kontakcie z wrogiem, ale wachlarz trzech pocisków (po 28 obrażeń na piętrze 2) omijał limit i sumował obrażenia.
 - **Poprawka w buildu 0.9.7:** każdy pocisk przeciwnika zachowuje referencję do strzelca; limit obrażeń 720 ms jest wspólny dla jego pocisków i kontaktu.
 - **Rozszerzenie w buildu 0.10.0:** HP przekaźnika skaluje się z mnożnikiem obrażeń piętra oraz o 8% za każdy kolejny pokój. Napis HP ochrony i komunikat „Przetrwaj” są dwukrotnie większe.
-- **Status:** poprawka i skalowanie gotowe; potwierdzić na telefonie, że jeden wachlarz nie niszczy od razu przekaźnika oraz sprawdzić większe napisy na ekranie.
+- **Status:** poprawka i skalowanie gotowe; potwierdzone
 
-### [ ] Powiadomienia rozwoju zasłaniają arenę
+### [x] Powiadomienia rozwoju są wyświetlane poza areną
 
 - **Objaw:** komunikaty, np. „LEVEL UP”, pojawiają się na środku areny i zasłaniają widok walki.
 - **Oczekiwane:** powiadomienia są czytelne, ale wyświetlane poza obszarem gry.
 - **Poprawka w buildu 0.10.0:** pasek komunikatów przeniesiony pod arenę, z zachowaniem tłumaczeń i czasu wyświetlania.
-- **Status:** zmiana czeka na test użytkownika.
+- **Status:** zatwierdzone
 
 ### Weryfikacja po poprawkach
 
-- [ ] Sprawdzić na telefonie, czy pociski, smugi, cząsteczki i rozbłyski nie wychodzą poza arenę.
-- [ ] Porównać przycisk pełnego ekranu w pauzie po przełączeniu języka PL/EN, także w orientacji poziomej.
-- [ ] Przejść menu, HUD, sklep, nagrody, walki z bossami i ekrany końcowe w Traditional Chinese; sprawdzić fonty, zawijanie tekstu i zapamiętanie języka po ponownym otwarciu.
-- [ ] Na komputerze sprawdzić flagi SVG w ustawieniach po przełączeniu PL/EN oraz wygląd przycisków klawiszy.
+- [x] Sprawdzić na telefonie, czy pociski, smugi, cząsteczki i rozbłyski nie wychodzą poza arenę.
+- [x] Sprawdzić przycisk pełnego ekranu w pauzie po przełączeniu języka PL/EN.
+- [x] Sprawdzić układ przycisku pełnego ekranu w orientacji poziomej.
+- [x] Przejść menu, HUD, sklep, nagrody, walki z bossami i ekrany końcowe w Traditional Chinese; sprawdzić fonty, zawijanie tekstu i zapamiętanie języka po ponownym otwarciu.
+- [x] Na komputerze sprawdzić flagi SVG w ustawieniach po przełączeniu PL/EN oraz wygląd przycisków klawiszy.
 
 ## Kolejne prace
 
 ### Priorytet 1 — kontrola wydania
 
-- [x] Utworzyć prywatny GitHub Release v0.10.0 z listą zmian i linkiem do pliku HTML w repozytorium.
-- [ ] Przejść całą kampanię od menu do zwycięstwa i osobno sprawdzić ekran śmierci oraz restart.
-- [ ] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
-- [ ] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
-- [ ] Na komputerze sprawdzić zmianę klawiszy, konflikt przypisań, przywracanie domyślnych oraz zapis po ponownym otwarciu gry.
-- [ ] Sprawdzić przejścia pokoi, cele przetrwania i przekaźnika, bossów, nagrody oraz zmianę broni.
-- [ ] Sprawdzić zapis postępu i odblokowań po zamknięciu i ponownym otwarciu gry.
+- [x] Utworzyć publiczny GitHub Release v0.10.0 z listą zmian i linkiem do pliku HTML w repozytorium.
+- [ ] Przejść całą kampanię od menu do zwycięstwa w głównym buildu 0.11.5; osobno sprawdzić ekran śmierci oraz restart.
+- [x] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
+- [x] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
+- [x] Na komputerze sprawdzić zmianę klawiszy, konflikt przypisań, przywracanie domyślnych oraz zapis po ponownym otwarciu gry.
+- [x] Sprawdzić przejścia pokoi, cele przetrwania i przekaźnika, bossów, nagrody oraz zmianę broni.
+- [x] Sprawdzić zapis postępu i odblokowań po zamknięciu i ponownym otwarciu gry.
 
 ### Priorytet 2 — balans i czytelność
 
 - [ ] Zebrać krótkie notatki z kilku runów na Normal i Hard: czas kampanii, zgony, nadmiar lub brak złomu, skuteczność broni i synergie.
 - [ ] Po zebraniu obserwacji poprawiać balans małymi zmianami i zapisywać każdą zmianę w osobnym commicie.
-- [x] Sprawdzić skalowanie gry na telefonie. Użytkownik potwierdził, że działa dobrze; układ przycisku pełnego ekranu pozostaje osobnym błędem.
+- [x] Sprawdzić skalowanie gry na telefonie; użytkownik potwierdził, że działa dobrze.
 - [ ] Po testach użytkownika dopracować układ poziomy: zebrać konkretne uwagi i poprawić rozmiar areny, rozmieszczenie HUD-u oraz wygodę sterowania dotykowego.
 
 ### Pomysły na później
 
-- [ ] Dodać podsumowanie runu ze statystykami: czas, pokój śmierci/zwycięstwa, zabici wrogowie, otrzymane obrażenia i wybrane bonusy.
-- [ ] Dodać opcję eksportu i importu lokalnego zapisu, aby można go było przenieść między przeglądarkami.
+- [x] Dodać suwak głośności z zapisem ustawienia na urządzeniu; użytkownik potwierdził działanie.
+- [x] !(Ważne) Regulacja rozmiaru (70–130%) i przezroczystości (35–100%) dotykowych elementów sterowania — wdrożona w głównym buildu 0.11.5; sprawdzona wcześniej przez użytkownika w Test Build 0.11.1.
+- [x] !(Ważne) Dodać muzykę cyberpunkową: spokojny motyw menu i szybszy motyw walki — proceduralne utwory są w głównym buildu 0.11.5; użytkownik odsłuchał pierwsze ok. 5 sekund w Test Build 0.11.1 i ocenił początek pozytywnie. Pełny odsłuch obu motywów i przejść między nimi: do sprawdzenia.
+- [ ] Dodać osobny motyw muzyczny do walk z bossami — niski priorytet, na później.
+- [x] Dodać podsumowanie runu dostępne opcjonalnie z ekranu zakończenia i w historii ostatnich 10 runów.
+- [ ] !(Ważne) Eksport/import lokalnego zapisu do przenoszenia między przeglądarkami — wdrożono w głównym buildu 0.11.5; czeka na test użytkownika:
+  - [ ] Wyeksportować zapis, zaimportować go w innej przeglądarce i sprawdzić język, ustawienia, postęp oraz historię runów.
+  - [ ] Sprawdzić anulowanie importu i potwierdzić, że dotychczasowy zapis pozostaje bez zmian.
+  - [ ] Sprawdzić odrzucenie nieprawidłowego lub uszkodzonego pliku bez nadpisania zapisu.
 - [ ] Rozważyć dodatkowe wyzwania lub warianty pokoi dopiero po sprawdzeniu balansu obecnej kampanii.
