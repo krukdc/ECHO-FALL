@@ -1,6 +1,8 @@
 # ECHO-FALL
 
-ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Aktualny główny build gry: `ECHO-FALL.build.0.11.5.html`.
+**Język / Language / 語言:** [Polski](README.md) · [English](README.en.md) · [繁體中文](README.zh-TW.md)
+
+ECHO-FALL to samodzielna, działająca offline gra akcji w jednym pliku HTML. Aktualny główny build gry: `ECHO-FALL.build.0.11.6.html`.
 
 ## Jak uruchomić grę
 
@@ -24,13 +26,26 @@ Postęp, odblokowania i ustawienie języka są zapisywane lokalnie w przeglądar
 
 
 Język polski, angielski lub tradycyjny chiński (繁體中文) oraz klawisze sterowania na komputerze można zmienić w ustawieniach na ekranie startowym lub w pauzie. Przypisania i wybór języka zapisują się lokalnie w przeglądarce. Strzałki nadal działają jako alternatywne sterowanie ruchem. Przycisk ⛶ w nagłówku lub menu pauzy przełącza tryb pełnoekranowy.
+
 ## Pliki projektu
 
-- `ECHO-FALL.build.0.11.5.html` — aktualna gra wraz z HTML, CSS i JavaScriptem.
+- `ECHO-FALL.build.0.11.6.html` — aktualna gra wraz z HTML, CSS i JavaScriptem.
 - `Older Versions/` — archiwum wcześniejszych wydań gry.
 - `docs/superpowers/specs/` — zatwierdzone opisy projektu.
 - `docs/superpowers/plans/` — plany implementacji i kampanii.
 - `TODO.md` — znane błędy i lista pomysłów na rozwój.
+- `dev/echo-fall-source/` — uporządkowane źródła lokalnego Test Buildu 0.12.0.
+
+## Źródła deweloperskie (opcjonalnie)
+
+Do grania wystarczy pobrać jeden plik HTML z wydania. Źródła i budowanie są potrzebne tylko przy pracach nad grą. Zainstaluj Node.js, a następnie uruchom w folderze repozytorium:
+
+```powershell
+node dev/echo-fall-source/tools/build.mjs
+node --test dev/echo-fall-source/tests/*.test.mjs
+```
+
+Pierwsze polecenie tworzy lokalny plik `dev/echo-fall-source/dist/Echo Test Build 0.12.0.html`. Nie jest on wysyłany do repozytorium.
 
 ## Zgłaszanie błędów
 
@@ -43,7 +58,7 @@ Uruchom te polecenia w folderze projektu:
 ```powershell
 git status
 git log --oneline
-git add ECHO-FALL.build.0.11.5.html TODO.md README.md
+git add README.md README.en.md README.zh-TW.md TODO.md
 git commit -m "Krótki opis zmiany"
 ```
 
