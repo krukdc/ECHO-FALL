@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b13">
+<title>ECHO//FALL — neonowe action RPG</title>
+<style>/*__ECHO_FALL_STYLES__*/</style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="sigil"><span>✳</span></div><div class="brand-name">ECHO<span style="color:#53677d">//</span><b>FALL</b></div></div>
+    <div class="top-right"><div class="run-tag">SEKTOR 09 <span style="color:#344559">/</span> ARCHIVE</div><button class="sound-btn" id="soundButton" aria-label="Wycisz dźwięk"><span class="dot">●</span><span id="soundLabel">AUDIO ON</span></button><button type="button" class="fullscreen-btn" id="fullscreenButton" aria-label="WEJDŹ W PEŁNY EKRAN" title="WEJDŹ W PEŁNY EKRAN"><span aria-hidden="true">⛶</span></button></div>
+  </header>
+  <div class="layout">
+    <section class="stage-col" aria-label="Arena gry">
+      <div class="stage-head"><div class="eyebrow">OBSZAR <strong>///</strong> <span id="sectorTitle">NIEZNANY</span></div><div class="phase-pill"><span class="pulse"></span><span id="phaseText">OCZEKIWANIE NA SYGNAŁ</span></div></div>
+      <div class="arena-wrap" id="arenaWrap">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <canvas id="gameCanvas" width="960" height="600" aria-label="Arena ECHO FALL"></canvas>
+        <div class="hud-top"><div class="stage-label">PIĘTRO <b id="floorValue">—</b></div><div class="wave-label">POKÓJ<b id="roomValue">— / 06</b></div></div>
+        <div class="boss-meter" id="bossMeter"><div class="boss-title"><span id="bossName">THE WARDEN</span> <span id="bossPhase">// PHASE I</span></div><div class="boss-track"><div class="boss-fill" id="bossFill"></div></div></div>
+        <div class="hud-bottom"><div class="bars"><div class="bar-row"><span>VITAL</span><div class="bar-track"><div class="bar-fill" id="hpFill"></div></div><span class="hp-value" id="hpValue">—</span></div><div class="bar-row"><span>AEGIS</span><div class="bar-track"><div class="bar-fill energy-fill" id="energyFill"></div></div><span class="hp-value" id="energyValue">—</span></div></div><div class="status-stack"><b id="levelValue">LEVEL 01</b><span id="killValue">0 FRAGMENTÓW</span><span id="weaponValue" class="weapon-mini">TWIN VECTOR</span><span id="scrapValue" class="scrap-mini">00 SCRAP</span></div></div>
+        <div class="touch-controls" id="touchControls" aria-label="Sterowanie dotykowe">
+          <div class="stick-wrap"><div class="move-stick" id="moveStick" role="application" aria-label="Wirtualny drążek ruchu"><div class="stick-ring"></div><div class="stick-nub" id="stickNub"></div></div><span class="touch-caption">MOVE</span></div>
+          <div class="touch-actions"><div class="system-row"><button class="touch-system" data-touch="stats" aria-label="SELECT — statystyki">SELECT</button><button class="touch-system start-button" data-touch="pause" aria-label="START — pauza">START</button></div><div class="action-row"><button class="touch-action dash-action shoulder-action" data-touch="dash" aria-label="L — Blink">L<small id="touchDashLabel">BLINK</small></button><button class="touch-action nova-action" data-touch="nova" aria-label="B — Nova">B<small id="touchNovaLabel">NOVA</small></button><button class="touch-action attack-action" data-touch="attack" aria-label="A — Atak podstawowy">A<small>FIRE</small></button></div><span class="touch-caption aim-caption">A FIRE · B NOVA · L BLINK</span></div>
+        </div>
+        <div class="modal" id="modal" hidden><div class="modal-card" id="modalCard"></div></div>
+      </div>
+      <div class="stage-note"><span><span class="key" data-control-group="moveUp,moveLeft,moveDown,moveRight">WASD</span> RUCH <span class="key" data-control-group="aimUp,aimLeft,aimDown,aimRight">IJKL</span> CELOWANIE <span class="key" data-control-label="attack">Z</span> ATAK <span class="key" data-control-label="nova">X</span> NOVA <span class="key" data-control-label="blink">SPACJA</span> BLINK</span><div class="toast" id="toast" role="status" aria-live="polite">SIGNAL</div><strong id="arenaHint">// SYSTEM READY</strong></div>
+    </section>
+    <aside class="side" aria-label="Status gracza i misji">
+      <section class="panel"><div class="panel-title"><span>OPERATIVE</span><button type="button" id="statsButton" class="stats-button" aria-label="Pokaż statystyki postaci">STATY [ C ]</button></div><div class="pilot"><div class="portrait">E</div><div><div class="pilot-name">Echo</div><div class="pilot-class">VOID RUNNER · CLASS IV</div></div></div><div class="xp-line"><span>EXPERIENCE</span><span id="xpLabel">0 / 100</span></div><div class="xp-track"><div class="xp-fill" id="xpFill"></div></div></section>
+      <section class="panel"><div class="panel-title"><span>LOADOUT</span><span id="weaponNameSide">TWIN VECTOR</span><span>QTY <b id="upgradeCount">00</b></span></div><div class="skill-list"><div class="skill"><div class="keycap" data-control-label="attack">Z</div><div><div class="skill-name" id="weaponAttackName">Przebicie</div><div class="skill-desc" id="weaponAttackDesc">KINETIC / SZYBKI STRZAŁ</div></div><div class="skill-state ready" id="shotState">READY</div></div><div class="skill"><div class="keycap" data-control-label="nova">X</div><div><div class="skill-name" id="weaponSpecialName">Nova</div><div class="skill-desc" id="weaponSpecialDesc">AEGIS / FALA ENERGII</div></div><div class="skill-state ready" id="novaState">READY</div></div><div class="skill"><div class="keycap" data-control-label="blink">␣</div><div><div class="skill-name">Blink</div><div class="skill-desc">SHIFT / UNIK I-FRAME</div></div><div class="skill-state ready" id="dashState">READY</div></div></div><div class="xp-line"><span>SCRAP</span><span id="scrapSide">0</span></div></section>
+      <section class="panel"><div class="panel-title"><span>DYREKTYWA</span><span>ACTIVE</span></div><div class="objective"><span class="objective-mark">◆</span><b id="objectiveTitle">Odnajdź wyjście.</b><br><span id="objectiveText">Wyczyść sektor, aby przejść dalej.</span></div></section>
+      <section class="panel intel"><div><div class="panel-title"><span>ARCHIVE FEED</span><span>LIVE</span></div><div class="intel-copy" id="feedText">„Każdy sygnał ma swoje echo.”<br><strong>— zapis #0001 / NEXUS</strong></div></div><div class="intel-foot"><span id="intelStatus">NO CARRIER</span><b>● ENCRYPTED</b></div></section>
+    </aside>
+  </div>
+  <footer class="bottomline"><div>NEURAL INTERFACE <span class="sep">/</span> <b>CONNECTED</b><span class="sep">/</span> BUILD 0.12.0</div><div><span class="key" data-control-label="blink">SPACE</span> UNIK <span class="sep">·</span> <span class="key">ESC</span> PAUZA <span class="sep">·</span> <span class="key">M</span> AUDIO</div></footer>
+<span id="waveValue" hidden></span>
+</main>
+<script>/*__ECHO_FALL_SCRIPT__*/</script>
+</body>
+</html>

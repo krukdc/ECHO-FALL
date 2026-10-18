@@ -2,5 +2,9 @@
 .codex-remote-attachments/
 .superpowers/
 
-# Local-only test build
+# Local-only test builds
 Echo Test Build 0.11.1.html
+Echo Test Build 0.11.6.html
+Echo Test Build 0.12.0.html
+Echo Test Build 0.12.1.html
+dev/echo-fall-source/dist/

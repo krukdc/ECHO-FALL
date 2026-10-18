@@ -55,10 +55,25 @@
 
 ## Kolejne prace
 
+### Test Build 0.12.1 — Endless i epilog
+
+- [ ] Po bossie 3 sprawdzić obie opcje: zakończenie runu oraz kontynuację z zachowaniem broni i builda.
+- [ ] Przejść piętra 4–6 (po dwa pokoje i boss na piętro); sprawdzić nowych wrogów, trzech bossów, skalowanie i leczenie między piętrami.
+- [ ] Sprawdzić Laser: pierścień-emiter obraca się za graczem podczas namierzania i blokuje kierunek po ładowaniu; wiązka biegnie do krawędzi areny. Zweryfikować trafienie oraz limit 50% maksymalnego HP, także na Hard.
+- [ ] Sprawdzić zwycięstwo epilogu, śmierć i restart oraz pojedynczy wpis historii runu.
+- [ ] Przetestować klawiaturę i dotyk, układ telefonu oraz PL, EN i Traditional Chinese.
+- [ ] Endless: rozegrać ponad 10 fal; sprawdzić licznik, brak bossów i pulę nowych wrogów po falach 5 i 10.
+- [ ] Endless: sprawdzić wzrost HP i obrażeń wrogów o 3% na falę bez wzrostu prędkości; przy 10, 60 i 100 fali potwierdzić mnożniki ×1,27, ×2,77 i ×3,97.
+- [ ] Endless: sprawdzić, że awans dodaje +2 maks. HP zamiast +5, a w trybach kampanii nadal +5.
+- [ ] Endless: co 10 fal sprawdzić podwyżkę cen sklepu o 25% (fala 10: ×1,25; fala 60: ×2,5), bez zmiany wartości kupowanych przedmiotów.
+- [ ] Endless: co 5 fal sprawdzić wybór Artefakt / Sklep / Ryzykowny pokój; po każdej opcji ma ruszyć następna fala, a liczba wrogów w ryzykownym pokoju ma również skalować się.
+- [ ] Endless: sprawdzić śmierć, restart oraz najwyższą falę w podsumowaniu i historii runów.
+- [x] Endless z Protokołem Okrążenia przetestowany do fali 46; trudny, ale możliwy do przeżycia. Poziom 319 i 1015 eliminacji.
+
 ### Priorytet 1 — kontrola wydania
 
 - [x] Utworzyć publiczny GitHub Release v0.10.0 z listą zmian i linkiem do pliku HTML w repozytorium.
-- [ ] Przejść całą kampanię od menu do zwycięstwa w głównym buildu 0.11.5; osobno sprawdzić ekran śmierci oraz restart.
+- [x] Przejść całą kampanię od menu do zwycięstwa w głównym buildu 0.11.6; osobno sprawdzić ekran śmierci oraz restart — użytkownik potwierdził wykonanie.
 - [x] Sprawdzić klawiaturę, pauzę, ustawienia języka i dotykowy drążek na telefonie.
 - [x] Sprawdzić pełny ekran na telefonie i komputerze, w tym wyjście przyciskiem przeglądarki oraz działanie przy otwarciu HTML w różnych aplikacjach.
 - [x] Na komputerze sprawdzić zmianę klawiszy, konflikt przypisań, przywracanie domyślnych oraz zapis po ponownym otwarciu gry.
@@ -67,19 +82,20 @@
 
 ### Priorytet 2 — balans i czytelność
 
-- [ ] Zebrać krótkie notatki z kilku runów na Normal i Hard: czas kampanii, zgony, nadmiar lub brak złomu, skuteczność broni i synergie.
+- [ ] Zebrać krótkie notatki z kilku runów na Normal i Hard: czas kampanii, zgony, nadmiar lub brak złomu, skuteczność broni i synergie. Użytkownik często o tym zapomina; użyj krótkiej ściągi po runie:
+  - `Normal/Hard | wynik | piętro/pokój | czas | zgony | złom: mało/OK/dużo | broń/synergie | 1 obserwacja`
 - [ ] Po zebraniu obserwacji poprawiać balans małymi zmianami i zapisywać każdą zmianę w osobnym commicie.
 - [x] Sprawdzić skalowanie gry na telefonie; użytkownik potwierdził, że działa dobrze.
-- [ ] Po testach użytkownika dopracować układ poziomy: zebrać konkretne uwagi i poprawić rozmiar areny, rozmieszczenie HUD-u oraz wygodę sterowania dotykowego.
+- [ ] Po testach użytkownika dopracować układ poziomy: na razie nie zgłoszono uwag; zebrać konkretne problemy, jeśli pojawią się później, i dopiero wtedy poprawić arenę, HUD lub sterowanie dotykowe.
 
 ### Pomysły na później
 
 - [x] Dodać suwak głośności z zapisem ustawienia na urządzeniu; użytkownik potwierdził działanie.
-- [x] !(Ważne) Regulacja rozmiaru (70–130%) i przezroczystości (35–100%) dotykowych elementów sterowania — wdrożona w głównym buildu 0.11.5; sprawdzona wcześniej przez użytkownika w Test Build 0.11.1.
-- [x] !(Ważne) Dodać muzykę cyberpunkową: spokojny motyw menu i szybszy motyw walki — proceduralne utwory są w głównym buildu 0.11.5; użytkownik odsłuchał pierwsze ok. 5 sekund w Test Build 0.11.1 i ocenił początek pozytywnie. Pełny odsłuch obu motywów i przejść między nimi: do sprawdzenia.
+- [x] !(Ważne) Regulacja rozmiaru (70–130%) i przezroczystości (35–100%) dotykowych elementów sterowania — wdrożona w głównym buildu 0.11.6; sprawdzona wcześniej przez użytkownika w Test Build 0.11.1.
+- [x] !(Ważne) Dodać muzykę cyberpunkową: spokojny motyw menu i szybszy motyw walki — proceduralne utwory i przejścia między nimi sprawdzone przez użytkownika; ocena: „fajna”. Są w głównym buildu 0.11.6.
 - [ ] Dodać osobny motyw muzyczny do walk z bossami — niski priorytet, na później.
 - [x] Dodać podsumowanie runu dostępne opcjonalnie z ekranu zakończenia i w historii ostatnich 10 runów.
-- [ ] !(Ważne) Eksport/import lokalnego zapisu do przenoszenia między przeglądarkami — wdrożono w głównym buildu 0.11.5; czeka na test użytkownika:
+- [ ] !(Ważne) Eksport/import lokalnego zapisu do przenoszenia między przeglądarkami — wdrożono w głównym buildu 0.11.6; test odłożony na później:
   - [ ] Wyeksportować zapis, zaimportować go w innej przeglądarce i sprawdzić język, ustawienia, postęp oraz historię runów.
   - [ ] Sprawdzić anulowanie importu i potwierdzić, że dotychczasowy zapis pozostaje bez zmian.
   - [ ] Sprawdzić odrzucenie nieprawidłowego lub uszkodzonego pliku bez nadpisania zapisu.

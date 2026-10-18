@@ -2,11 +2,11 @@
 
 **Language / Język / 語言:** [Polski](README.md) · [English](README.en.md) · [繁體中文](README.zh-TW.md)
 
-ECHO-FALL is a self-contained action game that runs offline from a single HTML file. The current main game build is `ECHO-FALL.build.0.11.6.html`.
+ECHO-FALL is a self-contained action game that runs offline from a single HTML file. The current main game build is `ECHO-FALL.build.0.12.0.html`.
 
 ## How to play
 
-1. Download the latest HTML file from the [latest release](https://github.com/krukdc/ECHO-FALL/releases/latest) and open it in a modern browser such as Chrome, Edge, or Firefox.
+1. Download `ECHO-FALL.build.0.12.0.html` from the repository or the [latest release](https://github.com/krukdc/ECHO-FALL/releases/latest), then open it in a modern browser such as Chrome, Edge, or Firefox.
 2. Start a run from the title screen. No installation, server, or internet connection is required.
 3. On a phone, open the file in a browser. The game detects touch input and displays on-screen controls. You can rotate your phone to landscape; the layout adapts to the orientation.
 
@@ -28,23 +28,23 @@ Polish, English, or Traditional Chinese (繁體中文) can be selected in Settin
 
 ## Project files
 
-- `ECHO-FALL.build.0.11.6.html` — the current game, including its HTML, CSS, and JavaScript.
+- `ECHO-FALL.build.0.12.0.html` — the current game, including its HTML, CSS, and JavaScript.
 - `Older Versions/` — archive of earlier game releases.
 - `docs/superpowers/specs/` — approved project specifications.
 - `docs/superpowers/plans/` — implementation and campaign plans.
 - `TODO.md` — known issues and ideas for future development.
-- `dev/echo-fall-source/` — organized source for the local 0.12.0 Test Build.
+- `dev/echo-fall-main-source/` — organized source for main build 0.12.0, without Debug features.
+- Test Build 0.12.1 with DEBUGGING ROOM remains a local test version and is not published in this repository.
 
 ## Development source (optional)
 
-You only need one HTML file from a release to play. The source and build steps are for game development. Install Node.js, then run these commands from the repository folder:
+You only need one HTML file to play. The source and build steps are for game development. Install Node.js, then run these commands from the repository folder:
 
 ```powershell
-node dev/echo-fall-source/tools/build.mjs
-node --test dev/echo-fall-source/tests/*.test.mjs
+node dev/echo-fall-main-source/tools/build.mjs
 ```
 
-The first command creates `dev/echo-fall-source/dist/Echo Test Build 0.12.0.html` locally. The generated file is not uploaded to the repository.
+This command creates `ECHO-FALL.build.0.12.0.html` in the repository root. Test Build 0.12.1 with Debug features remains local and is not included in the repository.
 
 ## Reporting a bug
 
