@@ -1,92 +1,85 @@
 name: Zgłoś błąd
 description: Opisz problem z grą, urządzeniem i krokami do jego odtworzenia.
 title: "[BŁĄD] "
+labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        Zgłoszenia w tym prywatnym repozytorium widzą tylko osoby z dostępem do projektu.
-
+        Repozytorium i zgłoszenia są publiczne. Nie dołączaj danych osobowych ani prywatnych plików.
+        Zgłoszenia PL / EN / 繁體中文 są mile widziane.
   - type: input
     id: build
     attributes:
-      label: Wersja gry
-      description: Numer widoczny w stopce gry lub nazwa pliku buildu.
-      placeholder: ECHO-FALL.build.0.9.5.html
+      label: Wersja gry / Build
+      description: Dokładna nazwa pliku lub numer wersji ze stopki, także dla Test Buildu.
+      placeholder: ECHO-FALL.build.0.12.0.html
     validations:
       required: true
-
   - type: dropdown
     id: device
     attributes:
-      label: Urządzenie
-      options:
-        - Telefon
-        - Tablet
-        - Komputer
-        - Inne
+      label: Urządzenie / Device
+      options: [Telefon, Tablet, Komputer, Inne]
     validations:
       required: true
-
   - type: input
     id: device_model
     attributes:
-      label: Model urządzenia i system
-      placeholder: np. Pixel 8, Android 16 albo Windows 11
-    validations:
-      required: false
-
+      label: Model urządzenia i system / Device and OS
+      placeholder: Pixel 8 / Android 16 lub Windows 11
   - type: input
     id: browser
     attributes:
-      label: Przeglądarka i wersja
-      placeholder: np. Chrome 140
+      label: Przeglądarka i wersja / Browser
     validations:
       required: true
-
   - type: dropdown
     id: orientation
     attributes:
-      label: Orientacja ekranu
-      options:
-        - Pozioma
-        - Pionowa
-        - Nie dotyczy
+      label: Orientacja ekranu / Orientation
+      options: [Pozioma, Pionowa, Nie dotyczy]
     validations:
       required: true
-
+  - type: dropdown
+    id: language
+    attributes:
+      label: Język gry / Game language
+      options: [Polski, English, 繁體中文]
+    validations:
+      required: true
+  - type: input
+    id: run_context
+    attributes:
+      label: Tryb, wyzwanie i miejsce / Run context
+      description: Podaj Standard / Hard / Endless, wyzwanie, broń i piętro-pokój lub falę.
+      placeholder: Standard, bez wyzwania, Rail Driver, 2-2
+  - type: input
+    id: launch_method
+    attributes:
+      label: Sposób otwarcia i sterowanie / Launch and controls
+      description: Np. lokalny HTML lub plik z komunikatora, pełny ekran, mysz / klawiatura / dotyk.
   - type: textarea
     id: steps
     attributes:
-      label: Kroki do odtworzenia
+      label: Kroki do odtworzenia / Steps to reproduce
       description: Wypisz po kolei, co zrobić, aby zobaczyć problem.
-      placeholder: |
-        1. Otwórz grę...
-        2. Wybierz...
-        3. Problem pojawia się, gdy...
     validations:
       required: true
-
   - type: textarea
     id: expected
     attributes:
-      label: Oczekiwane działanie
-      description: Co powinno się wydarzyć?
+      label: Oczekiwane działanie / Expected behavior
     validations:
       required: true
-
   - type: textarea
     id: actual
     attributes:
-      label: Rzeczywiste działanie
-      description: Co wydarzyło się zamiast tego?
+      label: Rzeczywiste działanie / Actual behavior
     validations:
       required: true
-
   - type: textarea
     id: media
     attributes:
-      label: Zrzut ekranu lub dodatkowe informacje
-      description: Możesz dołączyć zrzut ekranu po utworzeniu zgłoszenia. Nie umieszczaj danych osobowych.
-    validations:
-      required: false
+      label: Zrzut lub nagranie / Screenshot or video
+      description: Dołącz materiał pokazujący błąd. Usuń dane osobowe przed wysłaniem.
