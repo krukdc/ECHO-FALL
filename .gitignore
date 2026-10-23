@@ -8,3 +8,9 @@ Echo Test Build 0.11.6.html
 Echo Test Build 0.12.0.html
 Echo Test Build 0.12.1.html
 dev/echo-fall-source/dist/
+
+# Local development bundles and unpublished candidates
+dev/echo-fall-source/
+dev/echo-fall-source.zip
+dev/echo-fall-main-source.zip
+ECHO-FALL.build.0.12.1.html

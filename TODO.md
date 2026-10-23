@@ -4,6 +4,17 @@
 
 ## Błędy
 
+### Przegląd 0.12.1 — 2026-10-22
+
+- [x] Oddzielić cel obrony przekaźnika od obiektu gracza; tarcza rozpoznaje kierunek pocisku. Sprawdzone automatycznie w obu buildach.
+- [x] Usunąć martwy zasięg tarczownika; atak kontaktowy ma osobne odnowienie 0,8 s i pełne obrażenia wroga zamiast obrażeń pomnożonych przez czas klatki. Testy 30/60/120 FPS.
+- [x] Przyznawać artefakty wspólną funkcją, aby synergie działały także w Endless.
+- [x] Poprawić przewidywanie kierunku nadlatujących pocisków przez strzelców.
+- [x] Ujednolicić restart przez click; sprawdzono mysz, klawiaturę i emulowany dotyk w Edge dla obu buildów.
+- [ ] Potwierdzić powyższe poprawki w pełnym runie na fizycznym telefonie; szczególnie odczuwalny balans ataku tarczownika.
+- [ ] Dalszy przegląd synergii Vital Echo: stałe leczenie 20 HP może obniżyć leczenie przy specialHeal większym niż 20; ustalić oczekiwaną zasadę bonusu.
+- [ ] Ujednolicić wizualne zapowiedzi ataków z celem przekaźnika (część rysowania nadal odwołuje się bezpośrednio do gracza).
+
 ### [x] Pociski i efekty wizualne pozostają poza ekranem areny
 
 - **Objaw:** na załączonym zrzucie z telefonu jasne ślady pocisków lub efektów przecinają górną krawędź pola gry i są widoczne przy jego brzegu. Zgłoszenie pochodzi z mobilnego widoku pliku HTML.
@@ -100,3 +111,9 @@
   - [ ] Sprawdzić anulowanie importu i potwierdzić, że dotychczasowy zapis pozostaje bez zmian.
   - [ ] Sprawdzić odrzucenie nieprawidłowego lub uszkodzonego pliku bez nadpisania zapisu.
 - [ ] Rozważyć dodatkowe wyzwania lub warianty pokoi dopiero po sprawdzeniu balansu obecnej kampanii.
+
+### Słowniki językowe — migracja etapowa
+- [x] Oddzielne pl.json, en.json i zh-TW.json, stałe klucze, parametry oraz angielski fallback; słowniki osadzane w jednym HTML.
+- [x] Przeniesione ustawienia, import/eksport, etykiety nagród Endless, tytuł epilogu i przyciski start/restart/ustawienia.
+- [x] Przenieść teksty HUD, wyniku, broni, artefaktów, wyzwań i walki na klucze PL/EN/繁體中文; usunąć podmianę fragmentów słów. Sprawdzone automatycznie ekrany obu buildów w trzech językach.
+- [ ] Sprawdzić ręcznie PL/EN/繁體中文 na telefonie i PC po migracji słowników.

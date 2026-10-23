@@ -1,12 +1,13 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { bundleLocales } from './locales.mjs';
 
 const sourceRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const repositoryRoot = resolve(sourceRoot, '../..');
 const templatePath = resolve(sourceRoot, 'src/index.template.html');
 const stylesPath = resolve(sourceRoot, 'src/styles.css');
-const outputPath = resolve(repositoryRoot, 'ECHO-FALL.build.0.12.0.html');
+const outputPath = resolve(repositoryRoot, 'ECHO-FALL.build.0.12.5.html');
 const fragments = [
   '00-bootstrap.js',
   '05-epilogue-rules.js',
@@ -28,7 +29,7 @@ function replaceExactlyOnce(source, marker, replacement, label) {
   if (occurrences !== 1) {
     throw new Error(`Szablon musi zawierać dokładnie jeden znacznik ${label}; znaleziono: ${occurrences}.`);
   }
-  return source.replace(marker, replacement);
+  return source.replace(marker, () => replacement);
 }
 
 // #(Składa produkcyjne źródła w jeden samodzielny plik głównej gry.)
@@ -39,7 +40,8 @@ async function build() {
     ...fragments.map((name) => readFile(resolve(sourceRoot, 'src/js', name), 'utf8')),
   ]);
   let output = replaceExactlyOnce(template, '/*__ECHO_FALL_STYLES__*/', styles, 'CSS');
-  output = replaceExactlyOnce(output, '/*__ECHO_FALL_SCRIPT__*/', scripts.join('\n\n'), 'JavaScript');
+  const script=replaceExactlyOnce(scripts.join('\n\n'),'/*__ECHO_I18N__*/',await bundleLocales(sourceRoot),'słowniki');
+  output = replaceExactlyOnce(output, '/*__ECHO_FALL_SCRIPT__*/', script, 'JavaScript');
   await writeFile(outputPath, output, 'utf8');
   console.log(`Zbudowano: ${outputPath}`);
 }

@@ -77,7 +77,7 @@ Statystyki zwykłych wrogów to wartości bazowe dla Standardu na pierwszym pię
 - **{Name}:** Bastion / Bulwark (`bulwark`)
 - **{Design}:** Duży stalowoniebieski romb, promień 19. Osłona obraca się w stronę gracza.
 - **{Base stats}:** HP 128 · szybkość 34 · obrażenia bazowe 25 · XP 46 · promień 19.
-- **{AI (Behavior)}:** Powoli zbliża się i co 1,05 s aktualizuje kierunek tarczy. Strzały gracza trafiające w przednią osłonę są blokowane.
+- **{AI (Behavior)}:** Powoli zbliża się do celu. Tarcza obraca się płynnie z ograniczoną szybkością, więc można go oskrzydlić. Przednia osłona zmniejsza obrażenia o 45%, ale nie zeruje ich całkowicie. Kierunek trafienia pocisku wynika z jego ruchu. Dochodzi do zasięgu kontaktu i atakuje za pełne obrażenia co 0,8 s (niezależnie od FPS).
 - **{Attacks}:** Nie ma pocisków. Przy kontakcie zadaje obrażenia ciągłe równe 35% bazowych obrażeń na sekundę.
 
 ## Syfon (Siphon)
